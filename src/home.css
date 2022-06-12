@@ -20,6 +20,26 @@ body {
 
 }
 
+ul {
+    list-style: none;
+}
+
+.suggInfo ul{
+    padding-left: 10px; 
+}
+.suggInfo li {
+    margin-top: 2px;
+}
+.suggInfo li:first-child {
+    color: #262626;
+    font-size:15px;
+}
+.suggInfo li:last-child {
+    color: #8e8e8e;
+    font-size: 13px; 
+}
+
+
 
 header h1{
     font-family: 'Playfair Display', serif;
@@ -64,10 +84,10 @@ header input:focus {
 aside {
     display: flex; 
     flex-direction: column; 
-    padding-top: 65px;
+    padding-top: 100px;
     float: right;
-    padding-right: 40%;
-    width: 5%;
+    padding-right: 15%;
+    width: 30%;
 }
 /*
 aside will be: 
@@ -77,6 +97,11 @@ aside will be:
      FLEXBOX OF PROFILES: 
     Information 
 */
+
+.footnote {
+    font-size: 10px; 
+    color: #c7c7c7;
+}
 .feed {
     display:flex; 
     flex-direction: column;
@@ -98,6 +123,44 @@ aside will be:
     border-radius:50%
 }
 
+.profile{
+    display: flex; 
+}
+
+.profile img {
+    width: 56px;
+    height: 56px;
+}
+
+.suggestions .profile img {
+    width: 32px;
+    height: 32px;
+}
+.profile .suggInfo {
+    width: 200px;
+    position:relative;
+    bottom:8px;
+}
+.suggestions .profile .suggInfo {
+    width: 200px;
+    position:relative;
+    bottom:15px;
+}
+.profile .suggestRHS {
+    position:relative;
+    top: 10px;
+    font-size: 13px;
+}
+
+.suggestions .profile .suggestRHS {
+    position:relative;
+    top: 6px;
+}
+
+.suggestions .profile .suggInfo{
+    width: 224px;
+}
+
 
 #nav img {
     margin-top: 15px;
@@ -105,7 +168,9 @@ aside will be:
     width: 30px;
     height: 30px;
 }
-
+#myName {
+    font-size: 15px;
+}
 /* search disappears at 765 px */
 /* side bar disappears at 1000 px */
 
