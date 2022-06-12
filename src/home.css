@@ -1,0 +1,76 @@
+/* side bar disappears at 1000 px */
+/* search disappears at 640 px */
+
+
+header {
+    position: fixed;
+    top: 0;
+    display:flex;
+    justify-content:space-evenly;
+    width:100%;
+    background-color: #ffffff;
+    height:65px;
+    border-bottom: 1px 
+}
+
+body {
+    background-color: #fafafa;
+    font: normal 16px Arial, Helvetica, sans-serif;
+
+}
+
+aside {
+    padding-top: 65px;
+}
+header h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    margin-top: 15px;
+
+}
+
+
+header input {
+    border-radius: 10px;
+    border-color: transparent;
+    height: 30px;
+    width: 270px;
+    margin-top: 15px;
+    padding-left:25px;
+    padding-top: 4px;
+    padding-bottom: 2.3px;
+    position: relative;
+    font: normal 16px Arial, Helvetica, sans-serif;
+    background: url("https://www.kindpng.com/picc/m/49-497969_instagram-icon-black-png-magnifying-glass-vector-png.png") no-repeat scroll 7px 13px;
+    background-size:13px;
+    background-color: #efefef;
+}
+
+header input::placeholder {
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    opacity:60%;
+}
+
+header input:focus {
+    outline:none;
+    background: url("https://cdn.iconscout.com/icon/free/png-256/x-circle-3602289-3005823.png") no-repeat scroll 270px 9px; 
+    background-size: 20px; 
+    background-color: #efefef;
+    padding-left: 5px; 
+    width: 290px;
+}
+
+header .item img {
+    margin-top: 15px;
+    margin-right:20px;
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 707px) {
+    header input {
+        display:none;
+    }
+}
