@@ -132,6 +132,10 @@ aside will be:
     height: 56px;
 }
 
+.suggestions {
+    display:flex; 
+    flex-direction: column;
+}
 .suggestions .profile img {
     width: 32px;
     height: 32px;
