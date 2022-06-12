@@ -1,17 +1,5 @@
-/* side bar disappears at 1000 px */
-/* search disappears at 640 px */
 
-@media (max-width: 765px) {
-    header input {
-        display:none;
-    }
-}
 
-@media (max-width: 1000px) {
-    aside {
-        display:none;
-    }
-}
 header {
     position: fixed;
     top: 0;
@@ -32,18 +20,13 @@ body {
 
 }
 
-aside {
-    padding-top: 65px;
-    float: right;
-    padding-right: 40%;
-}
+
 header h1{
     font-family: 'Playfair Display', serif;
     font-size: 27px;
     margin-top: 15px;
 
 }
-
 
 header input {
     border-radius: 10px;
@@ -78,13 +61,39 @@ header input:focus {
 }
 
 
-
-.post {
+aside {
+    display: flex; 
+    flex-direction: column; 
+    padding-top: 65px;
+    float: right;
+    padding-right: 40%;
+    width: 5%;
+}
+/*
+aside will be: 
+    FLEXBOX: 
+    profile
+    Suggestions for you
+     FLEXBOX OF PROFILES: 
+    Information 
+*/
+.feed {
+    display:flex; 
+    flex-direction: column;
     padding-top: 65px;
     float:left; 
     padding-left:25%;
+    max-width:28%;
 }
 
+
+.post {
+
+}
+
+.stories {
+
+}
 .icon {
     border-radius:50%
 }
@@ -95,4 +104,19 @@ header input:focus {
     margin-right:20px;
     width: 30px;
     height: 30px;
+}
+
+/* search disappears at 765 px */
+/* side bar disappears at 1000 px */
+
+@media (max-width: 765px) {
+    header input {
+        display:none;
+    }
+}
+
+@media (max-width: 1000px) {
+    aside {
+        display:none;
+    }
 }
