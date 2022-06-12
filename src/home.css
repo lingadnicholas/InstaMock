@@ -1,16 +1,29 @@
 /* side bar disappears at 1000 px */
 /* search disappears at 640 px */
 
+@media (max-width: 765px) {
+    header input {
+        display:none;
+    }
+}
 
+@media (max-width: 1000px) {
+    aside {
+        display:none;
+    }
+}
 header {
     position: fixed;
     top: 0;
+    left:0;
     display:flex;
     justify-content:space-evenly;
     width:100%;
     background-color: #ffffff;
     height:65px;
-    border-bottom: 1px 
+    box-shadow: 0px 1px 0px 0px lightgray;
+    padding-left:5%;
+
 }
 
 body {
@@ -21,6 +34,8 @@ body {
 
 aside {
     padding-top: 65px;
+    float: right;
+    padding-right: 40%;
 }
 header h1{
     font-family: 'Playfair Display', serif;
@@ -62,15 +77,22 @@ header input:focus {
     width: 290px;
 }
 
-header .item img {
+
+
+.post {
+    padding-top: 65px;
+    float:left; 
+    padding-left:25%;
+}
+
+.icon {
+    border-radius:50%
+}
+
+
+#nav img {
     margin-top: 15px;
     margin-right:20px;
     width: 30px;
     height: 30px;
-}
-
-@media (max-width: 707px) {
-    header input {
-        display:none;
-    }
 }
