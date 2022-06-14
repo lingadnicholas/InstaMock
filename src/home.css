@@ -135,7 +135,9 @@ aside will be:
     padding-top: 2px; 
 }
 
-.closeFriends {
+.closeFriends img {
+    background: -webkit-linear-gradient(right top, #1cd14f
+    0%, #ffffff 100%);
 
 }
 .post {
