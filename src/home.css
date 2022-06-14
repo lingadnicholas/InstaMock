@@ -105,21 +105,44 @@ aside will be:
 .feed {
     display:flex; 
     flex-direction: column;
-    padding-top: 65px;
+    padding-top: 100px;
     float:left; 
     padding-left:20%;
     width: 450px;
     max-width: 450px;
 }
 
+.regularStory {
+    display:flex;
+    flex-direction:column;
+    padding-top: 10px;
+    padding-left:10px;
+    font-size: 10px; 
+    width:450px;
 
+}
+
+
+.regularStory img {
+    background: -webkit-linear-gradient(right top, #d405c6 0%, #ffc917 100%);
+    padding: 3px;
+    width: 56px;
+    height: 56px;
+}
+
+.regularStory p {
+    padding-left: 4px; 
+    padding-top: 2px; 
+}
+
+.closeFriends {
+
+}
 .post {
 
 }
 
-.stories {
 
-}
 .icon {
     border-radius:50%
 }
@@ -176,6 +199,16 @@ aside will be:
 #myName {
     font-size: 15px;
 }
+
+#stories {
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid lightgray; 
+}
+
+
 /* search disappears at 765 px */
 /* side bar disappears at 1000 px */
 
