@@ -1,5 +1,9 @@
 let submitBtns = document.getElementsByClassName("submitBtn");
 let inputBoxes = document.getElementsByTagName("textarea"); 
+let likeBtns = document.getElementsByClassName("like"); 
+let bookmarkBtns = document.getElementsByClassName("bookmark"); 
+
+// Functions for event listeners 
 
 let addComment = (e) => {
     e.preventDefault(); 
@@ -43,10 +47,41 @@ let addCommentEnter = (e) => {
     }
 }
 
-// Event listener for all buttons
-for (var i = 0; i < submitBtns.length; i++) {
+let bookmarkPost = (e) => {
+    (e.target.src === "https://freepngimg.com/thumb/instagram/60239-like-icons-bookmark-button-computer-facebook-instagram.png")?
+        e.target.src = "https://cdn-icons-png.flaticon.com/128/102/102279.png" : e.target.src = "https://freepngimg.com/thumb/instagram/60239-like-icons-bookmark-button-computer-facebook-instagram.png"
+ 
+}
+
+let likePost = (e) => {
+    const heartURL = "https://cdn-icons-png.flaticon.com/128/1077/1077035.png";
+    const likedHeartURL = "https://cdn-icons-png.flaticon.com/128/833/833472.png";
+    let numLikes = e.target.parentElement.nextElementSibling.innerText.split(" ")[0];
+    console.log(numLikes) 
+    if (e.target.src === heartURL) {
+        e.target.src = likedHeartURL; 
+        numLikes++; 
+    }
+    else {
+        e.target.src = heartURL; 
+        numLikes--;
+    }
+    e.target.parentElement.nextElementSibling.innerText = `${numLikes} likes`;
+}
+// EVENT LISTENERS // 
+// Event listeners for all buttons
+for (let i = 0; i < submitBtns.length; i++) {
     submitBtns[i].addEventListener("click", addComment);
 }
-for (var i = 0; i < inputBoxes.length; i++) {
+for (let i = 0; i < inputBoxes.length; i++) {
     inputBoxes[i].addEventListener("keypress", addCommentEnter);
 }
+
+// Change heart/bookmark icons 
+for (let i = 0; i < likeBtns.length; i++) {
+    likeBtns[i].addEventListener("click", likePost);
+}
+for (let i = 0; i < bookmarkBtns.length; i++) {
+    bookmarkBtns[i].addEventListener("click", bookmarkPost);
+}
+
