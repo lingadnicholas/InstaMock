@@ -246,7 +246,7 @@ aside will be:
 .content img {
     width:450px;
 }
-.addComment button {
+.addComment input {
     background-color: transparent; 
     border-color: transparent;
     color: #0095f7;
