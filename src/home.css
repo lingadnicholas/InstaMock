@@ -71,9 +71,13 @@ header input::placeholder {
     opacity:60%;
 }
 
+
 header input:focus {
     outline:none;
+    background:none;
+    /*
     background: url("https://cdn.iconscout.com/icon/free/png-256/x-circle-3602289-3005823.png") no-repeat scroll 270px 9px; 
+   */
     background-size: 20px; 
     background-color: #efefef;
     padding-left: 5px; 
@@ -275,6 +279,39 @@ aside will be:
 .userInteraction img:last-child{
     margin-left: auto;
 }
+
+.recent {
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.recent p {
+    padding-top: 5px;
+}
+.dropdown-menu {
+    position:relative; 
+    left:-50px;
+    background-color: #ffffff; 
+    width:380px;
+    height:450px;
+    padding-left:10px;
+    padding-right:10px;
+    display:none; 
+    flex-direction:column; 
+}
+ .dropdown-menu .profile {
+    display:flex;
+    justify-content:space-between;
+ }
+
+ .dropdown-menu .profile .suggInfo {
+    padding-right: 100px;
+ }
+.dropdown-menu .suggestRHS img{ 
+    width: 15px;
+    height: 15px;
+}
 #nav img {
     margin-top: 15px;
     margin-right:20px;
@@ -293,12 +330,17 @@ aside will be:
     border: 1px solid lightgray; 
 }
 
-
+.showDropdown {
+    display:flex;
+}
 /* search disappears at 765 px */
 /* side bar disappears at 1000 px */
 
 @media (max-width: 765px) {
     header input {
+        display:none;
+    }
+    .dropdown-menu {
         display:none;
     }
 }

@@ -2,7 +2,9 @@ let submitBtns = document.getElementsByClassName("submitBtn");
 let inputBoxes = document.getElementsByTagName("textarea"); 
 let likeBtns = document.getElementsByClassName("like"); 
 let bookmarkBtns = document.getElementsByClassName("bookmark"); 
-
+let searchBox = document.getElementById("search"); 
+let clearBtns = document.getElementsByClassName("clearOne"); 
+let clearAllBtn = document.getElementById("clearAll") 
 // Functions for event listeners 
 
 let addComment = (e) => {
@@ -68,6 +70,32 @@ let likePost = (e) => {
     }
     e.target.parentElement.nextElementSibling.innerText = `${numLikes} likes`;
 }
+
+let enableDropdown = (e) => {
+   e.target.nextElementSibling.classList.toggle("showDropdown");
+}
+let disableDropdown = (e) => {
+    // First check that the user isn't clicking in the dropdown itself
+    if (e.target === searchBox){
+        return;
+    }
+    else {
+        searchBox.nextElementSibling.classList.toggle("showDropdown"); 
+
+    }
+}
+
+let clearAll = (e) => {
+    e.target.parentElement.parentElement.innerHTML = `<div class="recent">
+    <h3>Recent</h3>
+    <p id="clearAll">Clear all</p>
+    </div>`
+
+}
+
+let clearOne = (e) => {
+    e.target.parentElement.parentElement.remove();
+}
 // EVENT LISTENERS // 
 // Event listeners for all buttons
 for (let i = 0; i < submitBtns.length; i++) {
@@ -85,3 +113,11 @@ for (let i = 0; i < bookmarkBtns.length; i++) {
     bookmarkBtns[i].addEventListener("click", bookmarkPost);
 }
 
+// Enable dropdown
+searchBox.addEventListener("focus", enableDropdown);
+searchBox.addEventListener("blur", disableDropdown);
+// Dropdown clearAll and clearOne 
+clearAllBtn.addEventListener("click", clearAll); 
+for (let i = 0; i < clearBtns.length; i++) {
+    clearBtns[i].addEventListener("click", clearOne);
+}
